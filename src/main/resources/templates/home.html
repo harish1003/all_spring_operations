@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+	<head>
+			<title>
+					Home Page
+			</title>
+			
+	<link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+	<script type = "text/javascript"
+			th:src ="@{/js/action.js}"> </script>
+	</head>
+	<body>
+	 <div class ="container my-2">
+	 <h1>HOME</h1>
+	  <a th:href ="@{/getAll}" class="btn btn-primary btn-sm mb-3"> Get Old Employees list</a>
+	  <a th:href ="@{/addEmployee}" class="btn btn-primary btn-sm mb-3"> Add Employee</a>
+	  <a th:href ="@{/getdeleteEmployeeId}" class="btn btn-primary btn-sm mb-3">Delete Employee</a>
+	  <a th:href ="@{/getIdUpdateEmployee}" class="btn btn-primary btn-sm mb-3">Update Employee</a>
+	  </div>
+	   <div>
+    <h1 style="text-align:center"> <i>New Employees Details:</i></h1>
+  </div>
+  <hr/>
+    <table border="3" width="90%" align = "center">
+    <thead>
+    	<tr >
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">Employee Id</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">First Name</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">Last Name</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">Email</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr align = "center" th:each="te : ${emp}">
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.EMPLOYEE_ID}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.FIRST_NAME}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.LAST_NAME}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.EMAIL}"/>
+    	</tr>
+    </tbody>
+    </table>
+	</body>
+</html>

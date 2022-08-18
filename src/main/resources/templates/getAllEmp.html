@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>All Employees</title>
+    
+<link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+  </head>
+
+  <body>
+  <div>
+    <h1 style="text-align:center"> <i>All Employees Details:</i></h1>
+  </div>
+  <hr/>
+    <table border="3" width="90%" align = "center">
+    <thead>
+    	<tr >
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">Employee Id</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">First Name</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">Last Name</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"
+    		style="text-align:center">Email</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" style="text-align:center">Phone Number</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" style="text-align:center">Hire Date</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150"  style="text-align:center">Job Id</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" style="text-align:center">Salary</th>
+    	
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" style="text-align:center">Manager Id</th>
+    		<th cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" style="text-align:center">Department Id</th>
+    	</tr>
+    </thead>
+    <tbody>
+    	<tr align = "center" th:each="te : ${e}">
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.EMPLOYEE_ID}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.FIRST_NAME}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.LAST_NAME}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.EMAIL}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.PHONE_NUMBER}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.HIRE_DATE}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.JOB_ID}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.SALARY}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.MANAGER_ID}"/>
+    		<td cellspacing = "4" 
+                cellpadding = "8" 
+ 				height = "50"
+				width = "150" th:text="${te.DEPARTMENT_ID}"/>
+    	</tr>
+    </tbody>
+    </table>
+    
+  </body>
+  
+
+</html>

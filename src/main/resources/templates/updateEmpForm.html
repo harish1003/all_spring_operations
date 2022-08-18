@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+	<head>
+			<title>
+					Update
+			</title>
+			
+	<link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+        crossorigin="anonymous">
+	</head>
+	<body>
+	 <div class ="container">
+	 <h1>Update Employee Form </h1>
+	 <hr/>
+	 <h2> Update Employee </h2>
+	 
+	 <form action="#" th:action="@{/doUpdate}" th:object="${emp}" method="post">
+	 	<h3> Employee id </h3>
+	 	<input type ="number" readonly th:field = "*{EMPLOYEE_ID}"
+	 		   th:value="${emp.EMPLOYEE_ID}"
+	 		   class="form-control mb-4 col-4">
+	 	<h3> First Name</h3>
+	 	<input type ="text" th:field = "*{FIRST_NAME}"
+	 	       th:value="${emp.FIRST_NAME}"
+	 		   class="form-control mb-4 col-4">
+	 	<h3> Last Name</h3>
+	 	<input type ="text" th:field = "*{LAST_NAME}"
+	 		    th:value="${emp.LAST_NAME}"
+	 		   class="form-control mb-4 col-4">	   
+	 	<h3>  Email </h3>
+	    <input type ="text" th:field = "*{EMAIL}"
+			   th:value="${emp.EMAIL}"
+	 		   class="form-control mb-4 col-4">
+	 		   <h3>  </h3>
+	    <button type="submit" class="btn btn-info col-2">Upadte Employee</button>
+	 </form>
+	 </div>
+	 
+	 
+	 
+	 
+	 
+	</body>
+</html>
